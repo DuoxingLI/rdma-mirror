@@ -1,0 +1,41 @@
+14:14:24.580  root      : INFO    : ++++++++ Thu Feb 24 14:14:24 2022 ++++++++
+14:14:24.639  scapy.runtime: WARNING : No route found for IPv6 destination :: (no default route?)
+14:14:24.662  root      : WARNING : VXLAN support not found in Scapy
+14:14:24.662  root      : WARNING : ERSPAN support not found in Scapy
+14:14:24.662  root      : WARNING : GENEVE support not found in Scapy
+14:14:24.663  root      : INFO    : MPLS support found in Scapy
+14:14:24.663  root      : WARNING : NVGRE support not found in Scapy
+14:14:24.663  root      : INFO    : IGMP support found in Scapy
+14:14:24.681  root      : DEBUG   : Parsed test parameters:
+14:14:24.681  root      : DEBUG   : 	*use_pi=False
+14:14:24.681  root      : DEBUG   : 	*config_file=filename
+14:14:24.681  root      : DEBUG   : 	*target=asic-model
+14:14:24.682  root      : DEBUG   : 	*thrift_server=localhost
+14:14:24.682  root      : DEBUG   : 	*port_mode=100g
+14:14:24.682  root      : DEBUG   : 	*setup=False
+14:14:24.682  root      : DEBUG   : 	*traffic_gen=None
+14:14:24.682  root      : DEBUG   : 	*p4c=
+14:14:24.682  root      : DEBUG   : 	*num_pipes=4
+14:14:24.682  root      : DEBUG   : 	*cleanup=False
+14:14:24.682  root      : DEBUG   : 	*counter_byte_adjust=0
+14:14:24.682  root      : DEBUG   : 	*grpc_server=localhost
+14:14:24.682  root      : DEBUG   : 	*test_seed=None
+14:14:24.682  root      : DEBUG   : 	*drivers_test_info=None
+14:14:24.682  root      : DEBUG   : 	*arch=tofino
+14:14:24.682  root      : DEBUG   : If something is missing, make sure you used the correct syntax: --test-params="[k=v;]*k=v"
+14:14:25.411  root      : INFO    : Importing platform: eth
+14:14:25.412  root      : DEBUG   : Configuration: {'xunit_dir': 'xunit', 'disable_ipv6': False, 'minsize': 0, 'list_test_names': False, 'test_file': None, 'test_spec': '', 'allow_user': False, 'test_order_seed': 2746, 'default_negative_timeout': 0.1, 'platform': 'eth', 'log_dir': None, 'xunit': False, 'disable_erspan': False, 'device_sockets': [], 'disable_geneve': False, 'socket_recv_size': 10240, 'profile': False, 'default_timeout': 2.0, 'platform_args': None, 'relax': False, 'random_seed': None, 'interfaces': [(0, 0, 'veth1'), (0, 1, 'veth3'), (0, 2, 'veth5'), (0, 3, 'veth7'), (0, 4, 'veth9'), (0, 5, 'veth11'), (0, 6, 'veth13'), (0, 7, 'veth15'), (0, 8, 'veth17'), (0, 9, 'veth19'), (0, 10, 'veth21'), (0, 11, 'veth23'), (0, 12, 'veth25'), (0, 13, 'veth27'), (0, 14, 'veth29'), (0, 15, 'veth31'), (0, 16, 'veth33'), (0, 64, 'veth251')], 'test_case_timeout': None, 'port_map': {(0, 1): 'veth3', (0, 0): 'veth1', (0, 15): 'veth31', (0, 14): 'veth29', (0, 13): 'veth27', (0, 64): 'veth251', (0, 7): 'veth15', (0, 12): 'veth25', (0, 6): 'veth13', (0, 11): 'veth23', (0, 16): 'veth33', (0, 5): 'veth11', (0, 10): 'veth21', (0, 4): 'veth9', (0, 9): 'veth19', (0, 3): 'veth7', (0, 8): 'veth17', (0, 2): 'veth5'}, 'disable_vxlan': False, 'disable_nvgre': False, 'qlen': 100, 'test_order': 'default', 'profile_file': 'profile.out', 'fail_skipped': False, 'test_params': "arch='tofino';target='asic-model';use_pi='False';traffic_gen='None';config_file='filename';drivers_test_info='None';test_seed='None';num_pipes='4';port_mode='100g';counter_byte_adjust='0';setup=False;cleanup=False;p4c='';thrift_server='localhost';grpc_server='localhost'", 'test_dir': '.', 'list': False, 'platform_dir': '/root/sde-9.1.1/bf-sde-9.1.1/install/lib/python2.7/site-packages/ptf/platforms', 'disable_igmp': False, 'disable_mpls': False, 'debug': 'verbose', 'log_file': 'ptf.log', 'failfast': False}
+14:14:25.412  root      : INFO    : port map: {(0, 1): 'veth3', (0, 0): 'veth1', (0, 15): 'veth31', (0, 14): 'veth29', (0, 13): 'veth27', (0, 64): 'veth251', (0, 7): 'veth15', (0, 12): 'veth25', (0, 6): 'veth13', (0, 11): 'veth23', (0, 16): 'veth33', (0, 5): 'veth11', (0, 10): 'veth21', (0, 4): 'veth9', (0, 9): 'veth19', (0, 3): 'veth7', (0, 8): 'veth17', (0, 2): 'veth5'}
+14:14:25.412  root      : INFO    : Autogen random seed: 71306683
+14:14:25.595  root      : INFO    : *** TEST RUN START: Thu Feb 24 14:14:25 2022
+14:14:25.596  root      : INFO    : ** START TEST CASE test.RdmaMirrorTest
+14:14:25.602  bfruntime_grpc_client: INFO    : Subscribe attempt #1
+14:14:25.603  bfruntime_grpc_client: INFO    : Subscribe response received 0
+14:14:25.603  bfruntime_grpc_client: INFO    : Binding with p4_name rdmamirror
+14:14:25.604  bfruntime_grpc_client: INFO    : Binding with p4_name rdmamirror successful!!
+14:14:25.629  bfruntime_grpc_client: INFO    : Received rdmamirror on GetForwarding
+14:14:25.656  root      : INFO    : ** END TEST CASE test.RdmaMirrorTest
+14:14:25.657  root      : INFO    : *** TEST RUN END  : Thu Feb 24 14:14:25 2022
+14:14:25.657  root      : INFO    : *** TEST RUN END  : Thu Feb 24 14:14:25 2022
+14:14:25.658  dataplane : INFO    : Thread exit
+14:14:25.658  dataplane : INFO    : Thread exit
