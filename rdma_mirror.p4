@@ -228,32 +228,32 @@ control SwitchIngress(
 
         //ldx code here
         
-        // if(!hdr.ib.isValid()){
-        //     table_port_forward.apply();
-        // }
-        // else{
-        //     ig_md.written_value = (bit<32>)hdr.ib.psn;
-        //     if(hdr.aeth.isValid()){
-        //         //ack forward directly
-        //         if(hdr.aeth.opcode == 3){
-        //             action_write_psn_reg();
-        //             set_mirror_type();
-        //         }
-        //         table_port_forward.apply();
+        if(!hdr.ib.isValid()){
+            table_port_forward.apply();
+        }
+        else{
+            ig_md.written_value = (bit<32>)hdr.ib.psn;
+            if(hdr.aeth.isValid()){
+                //ack forward directly
+                if(hdr.aeth.opcode == 3){
+                    action_write_psn_reg();
+                    set_mirror_type();
+                }
+                table_port_forward.apply();
 
-        //     }
-        //     else{
-        //         //not ack
-        //         ig_md.marked_psn = psn_reg_read.execute(1);
-        //         if(ig_md.marked_psn==ig_md.written_value){
-        //             set_mirror_type();
-        //         }
-        //         table_port_forward.apply();
-        //     }
-        // }
-        // set_normal_pkt();
+            }
+            else{
+                //not ack
+                ig_md.marked_psn = psn_reg_read.execute(1);
+                if(ig_md.marked_psn==ig_md.written_value){
+                    set_mirror_type();
+                }
+                table_port_forward.apply();
+            }
+        }
+        set_normal_pkt();
 
-        table_port_forward.apply();
+        // table_port_forward.apply();
     }
 }
 
